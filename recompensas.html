@@ -1,0 +1,511 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/tiny-slider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Cobertor da Esperança</title>
+
+</head>
+<style>
+    #tooltip{
+        background-color: #3b5d50;
+        color: rgb(172, 172, 21); 
+    }
+</style>
+<body>
+
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Cobertor da Esperança<span></span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" id="home_menu" style="display: block;" href="index.html">Home</a>
+                    </li>
+                    <li><a class="nav-link" id="doacao-menu" style="display: block;" href="doacao.html">Doações</a></li>
+                    <li class="active"><a class="nav-link" href="recompensas.html">Recompensas</a></li>
+                    <li><a class="nav-link" id="contato-menu" style="display: block;" href="contato.html">Contato</a></li>
+                    <li><a class="nav-link" id="cadastro-recompensas" href="cadastrorecompensas.html" style="display: none;">Cadastro de recompensas</a></li>
+                    <li><a class="nav-link" id="gerenciamento-usuarios" href="recompensasfunc.html" style="display: none;">Gerenciamento de usuários</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" id="botao_login" style="display: block;" href="login.html"><img src="images/user.svg"></a></li>
+                </ul>
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5" id="pontuacao1">
+                    <li><a class="nav-link" id="texto-pontuacao" style="display: none;">Sua pontuação é:</a></li>
+                    <li class="nav-link" id="pontuacao"></li>
+                </ul>
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" id="botao_sair" onclick="logout()" style="cursor: pointer; display: none;">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <!-- End Header/Navigation -->
+    <!-- Start Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>Recompensas</h1>
+                        <p class="mb-4">Descubra como você pode ser recompensado por suas doações e contribuições. Conheça nosso sistema de recompensas e faça parte dessa corrente de solidariedade.</p>
+                        <p><a href="contato.html" id="botao-contato1" class="btn btn-secondary me-2">Entre em contato</a><a href="login.html" class="btn btn-white-outline" id="botao-entrar2">Entrar</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="hero-img-wrap">
+                        <img src="images/couch.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero Section -->
+    <!-- Start We Help Section -->
+    <div class="we-help-section">
+        <div class="container">
+            <div class="row">
+                <!-- Coluna com o texto "We Help You Make Modern Interior Design" -->
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="section-title mb-4">Como funciona?</h2>
+                    <p>Nosso site também oferece um sistema de recompensas em parceria com a Campanha do Agasalho, que concede brindes aos doadores. O processo funciona da seguinte forma:</p>
+                </div>
+
+                <!-- Coluna com os quadradinhos informativos -->
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-6 col-md-6 col-lg-6 mb-4">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="images/support.svg" alt="Fast Shipping" class="img-fluid">
+                                </div>
+                                <h3>Cadastro no site:</h3>
+                                <p>O doador deve se cadastrar previamente no site, informando seu nome completo.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6 col-lg-6 mb-4">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="images/support.svg" alt="Easy to Shop" class="img-fluid">
+                                </div>
+                                <h3>Dirigir-se ao ponto de doação:</h3>
+                                <p>O doador vai até o local de doação e realiza a entrega dos itens.</p>
+                            </div>
+                        </div>
+
+                        <!-- Última fileira com três itens -->
+                        <div class="col-4 col-md-4 col-lg-4 mb-4">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="images/support.svg" alt="24/7 Support" class="img-fluid">
+                                </div>
+                                <h3>Registro de pontos:</h3>
+                                <p>Um membro da equipe registra os pontos correspondentes no sistema.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4 col-md-4 col-lg-4 mb-4">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="images/support.svg" alt="Hassle Free Returns" class="img-fluid">
+                                </div>
+                                <h3>Acompanhar a pontuação:</h3>
+                                <p>O doador pode acessar sua pontuação diretamente no site.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4 col-md-4 col-lg-4 mb-4">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="images/support.svg" alt="Hassle Free Returns" class="img-fluid">
+                                </div>
+                                <h3>Resgatar brindes:</h3>
+                                <p>Com base na pontuação acumulada, o doador pode resgatar os brindes disponíveis.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--começo da tabela-->
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Brinde</th>
+                    <th>Pontos necessários</th>
+                    <th>Descrição do brinde</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Caneta</td>
+                    <td>50 pontos</td>
+                    <td>Caneta ecológica feita com material reciclado.</td>
+                </tr>
+                <tr>
+                    <td>Bloco de notas</td>
+                    <td>70 pontos</td>
+                    <td>Bloco personalizado com a nossa logo.</td>
+                </tr>
+                <tr>
+                    <td>Ecobag</td>
+                    <td>150 pontos</td>
+                    <td>Bolsa sustentável para compras e uso diário.</td>
+                </tr>
+                <tr>
+                    <td>Caneca</td>
+                    <td>200 pontos</td>
+                    <td>Caneca de cerâmica com design especial.</td>
+                </tr>
+                <tr>
+                    <td>Garrafa</td>
+                    <td>250 pontos</td>
+                    <td>Garrafa reutilizável de aço inoxidável e com a nossa logo.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--fim da tabela-->
+    <!-- End We Help Section -->
+    <!-- Start Product Section -->
+    <div class="product-section">
+        <div class="container">
+            <div class="row">
+
+                <!-- Start Column 1 -->
+                <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+                    <h2 class="mb-4 section-title">Recompensas disponíveis</h2>
+                    <p class="mb-4">Cadastre seus pontos para ter acesso à suas recompensas.</p>
+                    <p><a href="#" class="btn">Voltar para o topo</a></p>
+                </div>
+                <!-- End Column 1 -->
+                <!-- Start Column 2 -->
+                <div class="col-md-12 col-lg-9" id="recompensas-veyr"></div>
+
+                <div class="container" id="recompensas_resgatadas" style="display: none;">
+                    <h2 class="section-title">Suas Recompensas Resgatadas:</h2>
+                    <div id="resgates">
+                        <!-- Os resgates serão carregados aqui -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Product Section -->
+    <!-- Start Footer Section -->
+    <footer class="footer-section">
+        <div class="container relative">
+
+            <div class="sofa-img">
+                <img src="images/sofa.png" alt="Image" class="img-fluid">
+            </div>
+
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Cobertor da Esperança<span></span></a></div>
+                    <p class="mb-4">Compartilhe amor, aqueça corações. Cada peça doada é um passo para um mundo mais gentil. Obrigado por fazer parte dessa corrente do bem!</p>
+
+
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row links-wrap">
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li id="doacao12"><a href="doacao.html">Doações</a></li>
+                                <li><a href="recompensas.html">Recompensas</a></li>
+                                <li id="contato12"><a href="contato.html">Contato</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-top copyright">
+                <div class="row pt-4">
+                    <div class="col-lg-6">
+                        <p class="mb-2 text-center text-lg-start">
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> Cobertor da Esperança.  Todos os direitos reservados.
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+<!--ancora-->
+  <a href="#" class="back-to-top">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+	</svg>
+</a>
+<!--ancora-->
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userId = localStorage.getItem('userId'); // Recupera o ID do usuário do localStorage
+            const isAuthenticatedFuncionario = localStorage.getItem('funcionario_authenticated') === 'true';
+
+            // Verifica se o usuário está logado
+            if (userId) {
+                // Exibe a div de recompensas resgatadas
+                document.getElementById('recompensas_resgatadas').style.display = 'block';
+                document.getElementById('botao-remover').style.display = 'none';
+                getRecompensasResgatadas(); // Chama a função para carregar as recompensas resgatadas
+            } else if (isAuthenticatedFuncionario){
+                document.getElementById('botao-remover').style.display = 'block';
+                document.getElementById('botao-add').style.display = 'none';
+                document.getElementById('recompensas_resgatadas').style.display = 'none';
+            } else {
+                // Se o usuário não estiver logado, esconde a div de recompensas resgatadas
+                document.getElementById('recompensas_resgatadas').style.display = 'none';
+            }
+
+            // Chama a função para carregar as recompensas
+            getRecompensas();
+        });
+
+        function showTooltip(event) {
+            let tooltip = document.getElementById('tooltip');
+
+            // Se o tooltip não existir no DOM, crie-o
+            if (!tooltip) {
+                tooltip = document.createElement('div');
+                tooltip.id = 'tooltip';
+                tooltip.style.position = 'absolute';
+                tooltip.style.backgroundColor = ' #3b5d50;';
+                tooltip.style.color = 'rgb(172, 172, 21)';
+                tooltip.style.padding = '5px';
+                tooltip.style.borderRadius = '5px';
+                tooltip.style.display = 'none';
+                tooltip.style.pointerEvents = 'none'; // Impede a interação com o tooltip
+                document.body.appendChild(tooltip);  // Adiciona o tooltip ao body
+            }
+
+            // Exibe o tooltip e posiciona de acordo com a posição do mouse
+            tooltip.style.display = 'block';
+
+            // Calcula a posição para garantir que o tooltip fique ao lado do cursor
+            let left = event.pageX + 10;
+            let top = event.pageY + 10;
+
+            // Ajusta a posição se o tooltip sair da tela
+            const tooltipWidth = tooltip.offsetWidth;
+            const tooltipHeight = tooltip.offsetHeight;
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+
+            if (left + tooltipWidth > screenWidth) {
+                left = event.pageX - tooltipWidth - 10; // Se estiver muito à direita, coloca à esquerda
+            }
+            if (top + tooltipHeight > screenHeight) {
+                top = event.pageY - tooltipHeight - 10; // Se estiver muito abaixo, coloca acima
+            }
+
+            // Aplica a posição do tooltip
+            tooltip.style.left = `${left}px`;
+            tooltip.style.top = `${top}px`;
+
+            // Atualiza o conteúdo do tooltip com a descrição
+            tooltip.textContent = event.currentTarget.querySelector('.tooltip').textContent;
+        }
+
+        // Função para esconder o tooltip
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            if (tooltip) {
+                tooltip.style.display = 'none';  // Esconde o tooltip
+            }
+        }
+
+        // Exemplo de como os cards de recompensa podem ser renderizados com os eventos de tooltip
+        function getRecompensas() {
+            const userId = localStorage.getItem('userId'); // Recupera o ID do usuário do localStorage
+            const isAuthenticatedFuncionario = localStorage.getItem('funcionario_authenticated') === 'true';
+
+            fetch('https://localhost:7177/Recompensas')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    const recompensas = document.getElementById('recompensas-veyr');
+                    recompensas.innerHTML = '';
+
+                    const row = document.createElement('div');
+                    row.classList.add('row');  // Cria a linha (row)
+
+                    data.forEach(item => {
+                        const imagemElement = document.createElement('img');
+                        imagemElement.src = `data:image/jpeg;base64,${item.imagem}`;
+
+                        const recompensaElement = document.createElement('div'); // Cria a div
+                        recompensaElement.id = `recompensa-${item.id}`; // Define um ID único
+                        recompensaElement.classList.add('col-12', 'col-md-4', 'col-lg-3', 'mb-5', 'mb-md-0'); // Adiciona as classes separadas
+                        recompensaElement.innerHTML = `
+                            <div class="product-item" onmouseover="showTooltip(event)" onmouseout="hideTooltip()">
+                                <img src="data:image/jpeg;base64,${item.imagem}" class="img-fluid product-thumbnail">
+                                <h3 class="product-title">${item.nome}</h3>
+                                <strong class="product-price">${item.valor}</strong>
+                                <h3 class="tooltip" style="display: none;">${item.descricao}</h3> <!-- Tooltip escondido até ativar -->
+                                <button type="submit" id="botao-add" class="btn btn-primary" onclick="resgatarRecompensa(${userId},${item.id}, '${item.codigo}')">Resgatar</button>
+                                <br>
+                                <button type="submit" id="botao-remover" class="btn btn-danger" onclick="deleteRecompensa(${item.id})">Deletar</button>
+                            </div>
+                        `;
+
+                        if (isAuthenticatedFuncionario) {
+                    recompensaElement.querySelector('#botao-add').style.display = 'none'; // Funcionario não vê o botão de resgatar
+                } else {
+                    recompensaElement.querySelector('#botao-remover').style.display = 'none'; // Usuário normal não vê o botão de remover
+                }
+
+                        row.appendChild(recompensaElement);
+                    });
+                    recompensas.appendChild(row);
+                });
+        }
+
+        function deleteRecompensa(id) {
+    fetch(`https://localhost:7177/Recompensas/${id}`, {
+        method: "DELETE"
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Recompensa deletada com sucesso!"); // Alerta para confirmar a deleção
+            getRecompensas(); // Chama a função para recarregar as recompensas após a deleção
+        } else {
+            alert("Erro ao deletar recompensa."); // Alerta caso ocorra algum erro
+        }
+    })
+    .catch(error => {
+        console.error("Erro ao tentar deletar a recompensa:", error);
+        alert("Erro ao tentar deletar a recompensa.");
+    });
+}
+
+        const userId = localStorage.getItem('userId');
+        function getRecompensasResgatadas() {
+
+            fetch(`https://localhost:7177/api/RecompensasResgatadas/${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const resgatesDiv = document.getElementById('resgates');
+                    resgatesDiv.innerHTML = ''; // Limpa a lista antes de adicionar
+
+                    if (data.length === 0) {
+                        resgatesDiv.innerHTML = '<p>Você ainda não resgatou nenhuma recompensa.</p>';
+                        return;
+                    }
+
+                    // Cria a lista de resgates
+                    data.forEach(item => {
+                        const resgateItem = document.createElement('div');
+                        resgateItem.classList.add('resgate-item');
+                        resgateItem.innerHTML = `
+                                <p><strong>Nome da recompensa:</strong> ${item.nome}</p>
+                                <p><strong>Código da Recompensa:</strong> ${item.codigo}</p>
+                                <hr>
+                            `;
+                        resgatesDiv.appendChild(resgateItem);
+                    });
+                })
+                .catch(error => {
+
+                });
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', getRecompensasResgatadas);
+
+
+        async function resgatarRecompensa(usuarioId, recompensaId) {
+
+            const dados = {
+                UsuarioId: usuarioId,
+                RecompensaId: recompensaId
+            };
+
+
+            try {
+                // Realizando a requisição POST usando fetch
+                const response = await fetch('https://localhost:7177/RecompensasResgatar/Resgatar', {
+                    method: 'POST', // Método HTTP
+                    headers: {
+                        'Content-Type': 'application/json' // Informando que os dados são JSON
+                    },
+                    body: JSON.stringify(dados) // Corpo da requisição com os dados convertidos para JSON
+                });
+
+                // Verifica se a resposta foi bem-sucedida (status 200)
+                if (response.ok) {
+                    const resultado = await response.json(); // Converte a resposta para JSON
+                    console.log('Recompensa resgatada com sucesso!', resultado);
+                    alert(resultado.message); // Exibe a mensagem de sucesso
+                    getRecompensasResgatadas();
+                    window.location.reload();
+
+                } else {
+                    // Se a resposta não for bem-sucedida, exibe uma mensagem de erro
+                    const erro = await response.json();
+                    console.error('Erro:', erro.message);
+                    alert(erro.message); // Exibe a mensagem de erro
+                }
+            } catch (erro) {
+                // Se ocorrer um erro na requisição, exibe no console
+                console.error('Erro na requisição:', erro);
+                alert('Erro ao tentar resgatar a recompensa.');
+            }
+        }
+
+    
+        getRecompensas();
+
+    </script>
+
+    <script src="js/funcionarios.js"></script>
+    <script src="js/sistema.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

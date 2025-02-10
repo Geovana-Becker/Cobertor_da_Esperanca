@@ -1,0 +1,273 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<title>Cobertor da Esperança</title>
+		<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+		<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init({
+      publicKey: 'o9BSej-2cHzr4W_B-',
+    });
+  })();
+</script>
+	</head>
+
+<body>
+
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Cobertor da Esperança<span></span></a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li><a class="nav-link" href="doacao.html">Doações</a></li>
+					<li><a class="nav-link" href="recompensas.html" onclick="return verificarAutenticacao2(event)">Recompensas</a></li>
+					<li class="active"><a class="nav-link" href="contato.html">Contato</a></li>
+					<li><a class="nav-link" id="cadastro-recompensas" href="cadastrorecompensas.html" style="display: none;">Cadastro de recompensas</a></li>
+					<li><a class="nav-link" id="gerenciamento-usuarios" href="recompensasfunc.html" style="display: none;">Gerenciamento de usuários</a></li>
+				</ul>
+
+				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+					<li><a class="nav-link" id="botao_login" style="display: block;" href="login.html"><img src="images/user.svg"></a></li>
+				</ul>
+				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5" id="pontuacao1">
+					<li><a class="nav-link" id="texto-pontuacao" style="display: none;">Sua pontuação é:</a></li>
+					<li class="nav-link" id="pontuacao"></li>
+				</ul>
+				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+					<li><a class="nav-link" id="botao_sair" onclick="logout()" style="cursor: pointer; display: none;">Sair</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+	<!-- End Header/Navigation -->
+	<!-- Start Hero Section -->
+	<div class="hero">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-5">
+					<div class="intro-excerpt">
+						<h1>Entre em contato</h1>
+						<p class="mb-4">Tem alguma dúvida ou gostaria de mais informações? Estamos aqui para ajudar! Entre em contato conosco e faça parte da nossa comunidade de doadores.</p>
+						<div class="d-flex align-items-center">
+                            <a href="recompensas.html" class="btn btn-secondary me-2" onclick="return verificarAutenticacao2(event)">Recompensas</a>
+                            <a href="login.html" id="botao-entrar2" class="btn btn-white-outline">Entrar</a>
+                        </div>   
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="hero-img-wrap">
+						<img src="images/couch.png" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Hero Section -->
+	<!-- Start Contact Form -->
+	<div class="untree_co-section">
+		<div class="container">
+
+			<div class="block">
+				<div class="row justify-content-center">
+
+
+					<div class="col-md-8 col-lg-8 pb-4">
+
+
+
+						<div class="row mb-5">
+							<div class="col-lg-4">
+								<div class="service no-shadow align-items-center link horizontal d-flex active" data-aos="fade-left" data-aos-delay="0">
+									<div class="service-icon color-1 mb-4">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+											<path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+										</svg>
+									</div> <!-- /.icon -->
+									<div class="service-contents">
+										<p>cobertordaesperanca@gmail.com</p>
+									</div> <!-- /.service-contents-->
+								</div> <!-- /.service -->
+							</div>
+						</div>
+						<form id="contact-form">
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="fname">Primeiro nome</label>
+										<input type="text" class="form-control" id="fname">
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="lname">Sobrenome</label>
+										<input type="text" class="form-control" id="lname">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="text-black" for="email">Endereço de Email</label>
+								<input type="email" class="form-control" id="email">
+							</div>
+
+							<div class="form-group mb-5">
+								<label class="text-black" for="message">Mensagem</label>
+								<textarea {resize:no;} name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-primary-hover-outline">Enviar mensagem</button>
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+	</div>
+
+	<!-- End Contact Form -->
+	<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+
+			<div class="sofa-img">
+				<img src="images/sofa.png" alt="Image" class="img-fluid">
+			</div>
+
+			<div class="row g-5 mb-5">
+				<div class="col-lg-4">
+					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Cobertor da Esperança<span></span></a></div>
+					<p class="mb-4">Compartilhe amor, aqueça corações. Cada peça doada é um passo para um mundo mais gentil. Obrigado por fazer parte dessa corrente do bem!</p>
+				</div>
+
+				<div class="col-lg-8">
+					<div class="row links-wrap">
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="doacao.html">Doações</a></li>
+								<li><a href="recompensas.html" onclick="return verificarAutenticacao2(event)">Recompensas</a></li>
+								<li><a href="contato.html">Contato</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="border-top copyright">
+				<div class="row pt-4">
+					<div class="col-lg-6">
+						<p class="mb-2 text-center text-lg-start">
+							Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script> Cobertor da Esperança.  Todos os direitos reservados.
+						</p>
+					</div>
+
+
+
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<!-- End Footer Section -->
+	<!--ancora-->
+  <a href="#" class="back-to-top">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+	</svg>
+</a>
+<!--ancora-->
+
+	<script>
+
+		window.onload = function () {
+			const isAuthenticated = localStorage.getItem('authenticated') === 'true';
+
+			// Referências aos botões
+			const botaoLogin = document.getElementById("botao_login");
+			const botaoSair = document.getElementById("botao_sair");
+			const botaoEntrar2 = document.getElementById("botao-entrar2");
+
+			if (isAuthenticated) {
+				// Usuário autenticado
+				botaoLogin.style.display = "none"; // Esconde o botão de login
+				botaoSair.style.display = "block"; // Mostra o botão de sair
+				botaoEntrar2.style.display = "none";
+			} else {
+				// Usuário não autenticado
+				botaoLogin.style.display = "block"; // Mostra o botão de login
+				botaoSair.style.display = "none"; // Esconde o botão de sair
+
+			}
+		};
+
+		
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();  // Impede o envio tradicional do formulário
+
+        var templateParams = {
+            from_name: document.getElementById("fname").value + " " + document.getElementById("lname").value,
+            from_email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        };
+
+        // Envia o e-mail usando EmailJS
+        emailjs.send("service_emytgl6", "template_lkro7x6", templateParams)
+            .then(function(response) {
+                alert("Mensagem enviada com sucesso!");
+                document.getElementById("contact-form").reset();  // Limpa o formulário
+            }, function(error) {
+                alert("Erro ao enviar mensagem: " + JSON.stringify(error));
+            });
+    });
+
+	</script>
+
+	<script src="js/sistema.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>

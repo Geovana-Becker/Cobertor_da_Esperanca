@@ -1,0 +1,376 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<title>Cobertor da Esperança</title>
+	</head>
+
+	<body>
+
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Cobertor da Esperança<span></span></a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li><a class="nav-link" href="doacao.html">Doações</a></li>
+						<li><a class="nav-link" href="recompensas.html" >Recompensas</a></li>
+						<li><a class="nav-link" href="contato.html">Contato</a></li>
+					</ul>
+
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+						<li><a class="nav-link" href="login.html"><img src="images/user.svg"></a></li>
+						
+					</ul>
+				</div>
+			</div>
+				
+		</nav>
+		<!-- End Header/Navigation -->
+
+		<!-- Start Hero Section -->
+			<div class="hero">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-5">
+							<div class="intro-excerpt">
+								<h1>Cadastre-se</h1>
+								<p class="mb-4">Ao se cadastrar, você se junta a uma comunidade solidária que transforma vidas por meio da doação de roupas. Inscreva-se agora e comece a fazer a diferença!</p>
+								<p><a href="doacao.html" class="btn btn-secondary me-2">Saiba mais</a><a href="login.html" class="btn btn-white-outline">Entrar</a></p>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="hero-img-wrap">
+								<img src="images/couch.png" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- End Hero Section -->
+
+<!-- secao de cadastro -->
+		<div class="untree_co-section">
+			<div class="container">
+
+				<div class="row justify-content-center">
+					<div class="col-md-8 col-lg-8 pb-4">
+						<div>
+							<h2 class="h3 mb-3 text-black" align="center">Cadastro</h2>
+							<div>
+							<form id="CadastroFuncionarios" onsubmit="return validar1(event)" method="post">
+								<div class="form-group row">
+									<div class="col-md-12">
+										<label for="c_fname" class="text-black">Nome<span class="text-danger">*</span></label>
+										<input type="text" class="form-control" minlength="13" id="c_funcname" name="c_funcname" required>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-md-12">
+										<label for="c_cpf" class="text-black">CPF<span class="text-danger">*</span></label>
+										<input type="text" class="form-control" id="c_funccpf" maxlength="14" name="c_funccpf" placeholder="Digite seu CPF" oninput="mascaraCPF(this)" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="c_country" class="text-black">Cargo<span class="text-danger">*</span></label>
+									<select id="c_country" class="form-control" required>
+										<option value="1">Selecione o cargo</option>
+										<option value="Administrador">Administrador</option>
+										<option value="DevOps">DevOps</option>
+									</select>
+								</div>
+								<div class="form-group row">
+									<div class="col-md-12">
+										<label for="c_address" class="text-black">Telefone<span class="text-danger">*</span></label>
+										<input type="text" class="form-control" id="c_functel" maxlength="15" name="c_functel" oninput="mascararTelefone(this)" placeholder="( )_____-____" required>
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-md-12">
+										<label for="c_email_address" class="text-black">E-mail<span class="text-danger">*</span></label>
+										<input type="email" class="form-control" id="c_funcemail" name="c_funcemail" required>
+									</div>
+									<div class="form-group row mb-5">
+										<div class="col-md-6">
+											<label for="c_phone" class="text-black">Senha<span class="text-danger">*</span></label>
+											<input type="password" class="form-control" id="c_funcsenha" name="c_funcsenha" placeholder="Digite a sua senha" required>
+										</div>
+										<div class="col-md-6">
+											<label for="c_phone1" class="text-black">Repita a senha<span class="text-danger">*</span></label>
+											<input type="password" class="form-control" id="c_rfuncsenha" name="c_rfuncsenha" placeholder="Repita a senha" required>
+										</div>
+									</div>
+								<div class="input-group w-75 couponcode-wrap">
+
+									<div class="input-group-append">
+										<button class="btn btn-black btn-sm" type="submit" id="button-addon2">Cadastrar</button>
+									</div>
+								</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+					<!-- </form> -->
+					<!--mensagens-->
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-8 col-lg-8 pb-4">
+						<div class="border p-4 rounded" role="alert">
+							Já é cadastrado? <a href="loginfunc.html">Clique aqui</a> para o login
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-8 col-lg-8 pb-4">
+						<div class="border p-4 rounded" role="alert">
+							Você é usuário? <a href="cadastro.html">Clique aqui</a> para o login.
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+					<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+
+			<div class="sofa-img">
+				<img src="images/sofa.png" alt="Image" class="img-fluid">
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="subscription-form">
+						<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Envie um email.</span></h3>
+
+						<form action="#" class="row g-3">
+							<div class="col-auto">
+								<input type="text" class="form-control" placeholder="Insira seu email">
+							</div>
+							<div class="col-auto">
+								<button class="btn btn-primary">
+									<span class="fa fa-paper-plane"></span>
+								</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row g-5 mb-5">
+				<div class="col-lg-4">
+					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Cobertor da Esperança<span></span></a></div>
+					<p class="mb-4">Compartilhe amor, aqueça corações. Cada peça doada é um passo para um mundo mais gentil. Obrigado por fazer parte dessa corrente do bem!</p>
+
+					<ul class="list-unstyled custom-social">
+						<li><a href="https://www.facebook.com/cobertordaesperanca/"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+						<li><a href="https://www.instagram.com/cobertoresperanca"><span class="fa fa-brands fa-instagram"></span></a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-8">
+					<div class="row links-wrap">
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="doacao.html">Doações</a></li>
+								<li><a href="recompensas.html">Recompensas</a></li>
+								<li><a href="contato.html">Contato</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="border-top copyright">
+				<div class="row pt-4">
+					<div class="col-lg-6">
+						<p class="mb-2 text-center text-lg-start">
+							Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script> Cobertor da Esperança.  Todos os direitos reservados.
+						</p>
+					</div>
+
+
+
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<!--ancora-->
+  <a href="#" class="back-to-top">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+	</svg>
+</a>
+<!--ancora-->
+	<!-- End Footer Section -->
+	<script>
+		function mascaraCPF(c_funccpf) {
+			c_funccpf.value = c_funccpf.value
+				.replace(/\D/g, "") // Remove qualquer caractere que não seja número
+				.replace(/(\d{3})(\d)/, "$1.$2") // Coloca ponto após os três primeiros dígitos
+				.replace(/(\d{3})(\d)/, "$1.$2") // Coloca ponto após os seis primeiros dígitos
+				.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Coloca traço antes dos dois últimos dígitos
+		}
+
+		function mascararTelefone(input) {
+			let valor = input.value.replace(/\D/g, ""); // Remove tudo que não for número.
+
+			if (valor.length > 10) {
+				// Formato para celular com DDD: (XX) XXXXX-XXXX
+				input.value = valor.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+			} else if (valor.length > 6) {
+				// Formato para telefone fixo: (XX) XXXX-XXXX
+				input.value = valor.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+			} else if (valor.length > 2) {
+				// Formato parcial: (XX) XXXX
+				input.value = valor.replace(/^(\d{2})(\d{0,4}).*/, "($1) $2");
+			} else {
+				// Formato parcial: (XX
+				input.value = valor.replace(/^(\d{0,2}).*/, "($1");
+			}
+		}
+
+		async function validar1(event) {
+			event.preventDefault();  // Impede o envio do formulário padrão.
+
+			const cpf = document.getElementById("c_funccpf").value.replace(/\D/g, "");  // Limpa o CPF de caracteres especiais
+
+			// Validação preliminar do formato do CPF
+			if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+				alert("CPF inválido. Verifique e tente novamente.");
+				return false;  // Impede o envio se o CPF for inválido
+			}
+
+            const cargo = document.getElementById("c_country").value;
+            if (cargo === "1") {  // Se a opção "Selecione o cargo" for escolhida (valor = 1)
+            alert("Por favor, selecione um cargo válido.");
+            return false;
+            }
+
+			// Validação do telefone
+			const telefone = document.getElementById("c_functel").value.replace(/\D/g, "");  // Limpa o telefone
+			if (telefone.length !== 11) {
+				alert("Número de telefone inválido. O formato correto é (XX)XXXXX-XXXX.");
+				return false;  // Impede o envio se o telefone for inválido
+			}
+
+			// Validação da senha
+			const senha = document.getElementById("c_funcsenha").value;
+			const repetirSenha = document.getElementById("c_rfuncsenha").value;
+			if (!senha || !repetirSenha) {
+				alert("Por favor, preencha os campos de senha.");
+				return false;
+			}
+
+			if (senha.length < 5) {
+				alert("A senha deve ter pelo menos 5 caracteres.");
+				return false;
+			}
+
+			if (senha !== repetirSenha) {
+				alert("As senhas não coincidem. Por favor, verifique e tente novamente.");
+				return false;
+			}
+
+			if (!/\d/.test(senha)) {
+				alert("A senha deve conter pelo menos um número.");
+				return false;
+			}
+
+			if (!/[!@#$%^&*(),.?":{}|<>]/.test(senha)) {
+				alert("A senha deve conter pelo menos um símbolo (ex: !, @, #, $, etc.).");
+				return false;
+			}
+
+			// Se tudo estiver correto, envia o formulário para criação do usuário
+			await addFuncionario(event);
+			return true;
+		}
+
+		async function addFuncionario(event) {
+			console.log();
+			const funcionario = {
+				NOME: document.getElementById("c_funcname").value,
+				CPF: document.getElementById("c_funccpf").value,
+                CARGO: document.getElementById("c_country").value,
+				TELEFONE: document.getElementById("c_functel").value,
+				EMAIL: document.getElementById("c_funcemail").value,
+				SENHA: document.getElementById("c_funcsenha").value
+			};
+
+			try {
+				const response = await fetch('https://localhost:7177/RegisterFuncionarios', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify(funcionario)
+				});
+
+				const data = await response.json();
+
+				if (response.ok) {
+                    document.getElementById('c_funcname').value = '';
+					document.getElementById('c_funccpf').value = '';
+                    document.getElementById('c_country').value = '';
+                    document.getElementById('c_functel').value = '';
+                    document.getElementById('c_funcemail').value = '';
+					document.getElementById('c_funcsenha').value = '';
+                    document.getElementById('c_rfuncsenha').value = '';
+					alert("Cadastro realizado com sucesso, agora você pode realizar o login.");
+                    window.location.href = 'loginfunc.html';
+					
+				} else {
+					alert(data.message);  
+				}
+			} catch (error) {
+				alert("Erro ao cadastrar funcionário. Tente novamente.");
+				console.error("Erro ao enviar dados:", error);
+			}
+		}
+
+
+		
+		document.getElementById('cadastroFuncionarios').onsubmit = validar;
+
+	</script>
+	<script src="js/sistema.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/tiny-slider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Cobertor da Esperança</title>
+</head>
+
+<body>
+
+    <!-- Inicio Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Cobertor da Esperança<span></span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li><a class="nav-link" href="doacao.html">Doações</a></li>
+                    <li><a class="nav-link" href="recompensas.html" onclick="return verificarAutenticacao2(event)">Recompensas</a></li>
+                    <li><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="login.html"><img src="images/user.svg"></a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Fim Header/Navigation -->
+    <!-- Comeco Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>Entrar</h1>
+                        <p class="mb-4">Seja bem-vindo de volta! Acesse sua conta para continuar fazendo parte de nossa comunidade solidária. Ao fazer login, você pode acompanhar suas doações, conhecer novos pontos de coleta e descobrir como suas ações estão ajudando a transformar vidas.</p>
+                        <p><a href="doacao.html" class="btn btn-secondary me-2">Saiba mais</a><a href="index.html" class="btn btn-white-outline">Voltar</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="hero-img-wrap">
+                        <img src="images/couch.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fim Hero Section -->
+    <!-- Início de login -->
+    <div class="untree_co-section">
+        <div class="container">
+            <div class="row mb-5 justify-content-center">
+
+
+                <!-- Formulário de login -->
+                <div class="col-md-6 col-lg-5 pb-4">
+                    <h2 class="h3 mb-3 text-black text-center">Bem-vindo de volta!</h2>
+                    <p class="text-center">Sentimos a sua falta, faça login para continuar.</p>
+
+                    <form>
+                        <!-- Input de CPF -->
+                        <div class="mb-3">
+                            <label for="c_usuario" class="form-label">CPF</label>
+                            <input type="text" maxlength="14" oninput="mascaraCPF(this)" class="form-control" id="c_usuario" name="c_usuario" placeholder="Digite seu CPF" required>
+                        </div>
+
+                        <!-- Input de Senha -->
+                        <div class="mb-3">
+                            <label for="c_senhau" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="c_senhau" name="c_senhau" placeholder="Digite sua senha" required>
+                        </div>
+
+                        <!-- Botão de Login -->
+                        <div class="input-group w-75 couponcode-wrap">
+
+                            <div class="input-group-append">
+                                <button onclick="login()" class="btn btn-black btn-sm" type="button" id="button-addon2">Entrar</button>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <!-- Mensagem de registro -->
+                        <div class="col-md-8 col-lg-8 pb-4">
+                            <div class="col-md-12">
+                                <div class="border p-4 rounded text-center" role="alert">
+                                    Não é cadastrado? <a href="cadastro.html">Clique aqui</a> para registrar.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mensagem de login para funcionários -->
+                        <div class="col-md-8 col-lg-8 pb-4">
+                            <div class="col-md-12">
+                                <div class="border p-4 rounded text-center" role="alert">
+                                    Você é funcionário? <a href="loginfunc.html">Clique aqui</a> para entrar.
+                                </div>
+                            </div>
+                        </div>
+</div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim de login -->
+   <!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+
+			<div class="sofa-img">
+				<img src="images/sofa.png" alt="Image" class="img-fluid">
+			</div>
+
+			<div class="row g-5 mb-5">
+				<div class="col-lg-4">
+					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Cobertor da Esperança<span></span></a></div>
+					<p class="mb-4">Compartilhe amor, aqueça corações. Cada peça doada é um passo para um mundo mais gentil. Obrigado por fazer parte dessa corrente do bem!</p>
+				</div>
+
+				<div class="col-lg-8">
+					<div class="row links-wrap">
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="doacao.html">Doações</a></li>
+								<li><a href="recompensas.html" onclick="return verificarAutenticacao2(event)">Recompensas</a></li>
+								<li><a href="contato.html">Contato</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="border-top copyright">
+				<div class="row pt-4">
+					<div class="col-lg-6">
+						<p class="mb-2 text-center text-lg-start">
+							Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script> Cobertor da Esperança.  Todos os direitos reservados.
+						</p>
+					</div>
+
+
+
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<!-- End Footer Section -->
+	<!--ancora-->
+  <a href="#" class="back-to-top">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+	</svg>
+</a>
+<!--ancora-->
+
+    <script>
+        function mascaraCPF(c_usuario) {
+            c_usuario.value = c_usuario.value
+                .replace(/\D/g, "") // Remove qualquer caractere que não seja número
+                .replace(/(\d{3})(\d)/, "$1.$2") // Coloca ponto após os três primeiros dígitos
+                .replace(/(\d{3})(\d)/, "$1.$2") // Coloca ponto após os seis primeiros dígitos
+                .replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Coloca traço antes dos dois últimos dígitos
+        }
+
+        function login() {
+            const c_usuario = document.getElementById("c_usuario").value;
+            const c_senhau = document.getElementById("c_senhau").value;
+
+            const login = {
+                "id": 0,
+                "nome": "string",
+                "cpf": c_usuario,
+                "telefone": "string",
+                "email": "string",
+                "senha": c_senhau,
+                "pontuacao": 0
+            };
+
+            console.log(login);
+            fetch('https://localhost:7177/LoginUsuarios', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(login)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data) {
+                        localStorage.setItem('userId', data.id); 
+                        localStorage.setItem('authenticated', 'true')
+                        alert('Login realizado com sucesso!');
+                        window.location.href = 'index.html';
+                    } else {
+                        alert('Usuário ou senha errados. Por favor verifique os dados inseridos e tente novamente.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Usuário ou senha errados. Por favor verifique os dados inseridos e tente novamente.');
+                });
+        }
+    </script>
+
+    <script src="js/sistema.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>

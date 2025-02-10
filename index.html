@@ -1,0 +1,240 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/tiny-slider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Cobertor da Esperança</title>
+</head>
+
+<body>
+
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Cobertor da Esperança<span></span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li><a class="nav-link" href="doacao.html">Doações</a></li>
+                    <li><a class="nav-link" href="recompensas.html" onclick="return verificarAutenticacao2(event)">Recompensas</a></li>
+                    <li><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li><a class="nav-link" id="cadastro-recompensas" href="cadastrorecompensas.html" style="display: none;">Cadastro de recompensas</a></li>
+                    <li><a class="nav-link" id="gerenciamento-usuarios" href="recompensasfunc.html" style="display: none;">Gerenciamento de usuários</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" id="botao_login" style="display: block;" href="login.html"><img src="images/user.svg"></a></li>
+                </ul>
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5" id="pontuacao1">
+                    <li><a class="nav-link" id="texto-pontuacao" style="display: none;">Sua pontuação é:</a></li>
+                    <li class="nav-link" style="display: none;" id="pontuacao"></li>
+                </ul>
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" id="botao_sair" onclick="logout()" style="cursor: pointer; display: none;">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <!-- End Header/Navigation -->
+    <!-- Start Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>Transforme Vidas <span clsas="d-block">com Suas Doações</span></h1>
+                        <p class="mb-4">Doe suas roupas usadas e ajude a aquecer quem precisa. Cada peça faz a diferença na vida de alguém.</p>
+                        <div class="d-flex align-items-center">
+                            <a href="recompensas.html" class="btn btn-secondary me-2" onclick="return verificarAutenticacao2(event)">Recompensas</a>
+                            <a href="login.html" id="botao-entrar2" class="btn btn-white-outline">Entrar</a>
+                        </div>   
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="hero-img-wrap">
+                        <img src="images/couch.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero Section -->
+    <!-- inicio introducao da home-->
+    <div class="we-help-section">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="imgs-grid">
+                        <div class="grid grid-1"><img src="images/img-grid-1.jpeg" alt="Untree.co"></div>
+                        <div class="grid grid-2"><img src="images/img-grid-2.jpeg" alt="Untree.co"></div>
+                        <div class="grid grid-3"><img src="images/img-grid-3.jpg" alt="Untree.co"></div>
+                    </div>
+                </div>
+                <div class="col-lg-5 ps-lg-5">
+                    <h2 class="section-title mb-4">Um Projeto de Solidariedade</h2>
+                    <p>Cobertor da Esperança é uma plataforma digital criada para incentivar e facilitar doações de roupas, promovendo a conscientização sobre a importância dessa prática para a sociedade. Através de informações relevantes e campanhas impactantes, a plataforma destaca os benefícios sociais das doações e motiva a participação ativa dos usuários em iniciativas solidárias.</p>
+                    <p><a href="doacao.html" class="btn">Saiba mais</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim introducao da home -->
+    <!--comeco Missoes-->
+    <div class="testimonial-section before-footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mx-auto text-center">
+                    <h2 class="section-title">Missão, Visão e Valores</h2>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="testimonial-slider-wrap text-center">
+
+                        <div id="testimonial-nav">
+                            <span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+                            <span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+                        </div>
+
+                        <div class="testimonial-slider">
+
+                            <div class="item">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 mx-auto">
+
+                                        <div class="testimonial-block text-center">
+                                            <blockquote class="mb-5">
+                                                <p>
+                                                    Cobertor da Esperança tem como objetivo promover a solidariedade e a inclusão social, facilitando e incentivando doações de roupas para pessoas em situação de vulnerabilidade. A plataforma também busca conectar doadores com a causa, fortalecendo o impacto das doações e contribuindo para a construção e avanço de uma sociedade mais justa e acolhedora.
+                                                </p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END item -->
+
+                            <div class="item">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 mx-auto">
+
+                                        <div class="testimonial-block text-center">
+                                            <blockquote class="mb-5">
+                                                <p>Impactar significativamente o volume de doações de roupas, aprimorando continuamente a plataforma para alcançar um número crescente de pessoas e garantir uma maior conscientização sobre a causa no futuro.</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END item -->
+
+                            <div class="item">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 mx-auto">
+
+                                        <div class="testimonial-block text-center">
+                                            <blockquote class="mb-5">
+                                                <p>O Cobertor da Esperança valoriza a solidariedade, incentivando a ajuda mútua entre pessoas e comunidades. Promove a inclusão, garantindo que todos, especialmente os mais vulneráveis, tenham acesso a recursos básicos, como roupas de qualidade. Além disso, reforça a sustentabilidade, reduzindo o descarte de roupas na natureza por meio do incentivo à doação.</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END item -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--fim Missoes-->
+    <!-- Start Footer Section -->
+    <footer class="footer-section">
+        <div class="container relative">
+
+            <div class="sofa-img">
+                <img src="images/sofa.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Cobertor da Esperança<span></span></a></div>
+                    <p class="mb-4">Compartilhe amor, aqueça corações. Cada peça doada é um passo para um mundo mais gentil. Obrigado por fazer parte dessa corrente do bem!</p>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row links-wrap">
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="doacao.html">Doações</a></li>
+                                <li><a href="recompensas.html" onclick="return verificarAutenticacao2(event)">Recompensas</a></li>
+                                <li><a href="contato.html">Contato</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-top copyright">
+                <div class="row pt-4">
+                    <div class="col-lg-6">
+                        <p class="mb-2 text-center text-lg-start">
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> Cobertor da Esperança.  Todos os direitos reservados.
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+<!--ancora-->
+  <a href="#" class="back-to-top">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+	</svg>
+</a>
+<!--ancora-->
+    <script src="js/sistema.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
